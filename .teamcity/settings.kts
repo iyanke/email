@@ -99,8 +99,15 @@ object FailedBuildBuild : BuildType({
             id = "BUILD_EXT_54"
             notifier = "email"
             buildStarted = true
+            buildFailedToStart = true
             buildFailed = true
+            firstFailureAfterSuccess = true
+            newBuildProblemOccured = true
             buildFinishedSuccessfully = true
+            firstBuildErrorOccurs = true
+            buildProbablyHanging = true
+            investigationIsUpdated = true
+            muteUpdated = true
             param("branchFilter", "+:refs/heads/bbbb")
             param("email", "inna_yan@mail.ru")
         }
