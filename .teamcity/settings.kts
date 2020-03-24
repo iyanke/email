@@ -111,6 +111,22 @@ object FailedBuildBuild : BuildType({
             param("branchFilter", "+:refs/heads/bbbb")
             param("email", "inna_yan@mail.ru")
         }
+        notifications {
+            id = "BUILD_EXT_55"
+            notifier = "emai"
+            buildStarted = true
+            buildFailedToStart = true
+            buildFailed = false
+            firstFailureAfterSuccess = true
+            newBuildProblemOccured = true
+            buildFinishedSuccessfully = true
+            firstBuildErrorOccurs = true
+            buildProbablyHanging = true
+            investigationIsUpdated = true
+            muteUpdated = true
+            param("branchFilter", "+:refs/heads/bbbb111")
+            param("email", "inna_yan111@mail.ru")
+        }
     }
     
     disableSettings("BUILD_EXT_2")
