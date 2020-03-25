@@ -130,18 +130,18 @@ object FailedBuildBuild : BuildType({
          notifications {
             id = "BUILD_EXT_56"
             notifier = "email"
-            buildStarted = true
-            buildFailedToStart = true
-            buildFailed = true
-            firstFailureAfterSuccess = true
-            newBuildProblemOccured = true
-            buildFinishedSuccessfully = true
-            firstBuildErrorOccurs = true
-            buildProbablyHanging = true
-            investigationIsUpdated = true
-            muteUpdated = true
+            buildStarted = false
+            buildFailedToStart = false
+            buildFailed = false
+            firstFailureAfterSuccess = false
+            newBuildProblemOccured = false
+            buildFinishedSuccessfully = false
+            firstBuildErrorOccurs = false
+            buildProbablyHanging = false
+            investigationIsUpdated = false
+            muteUpdated = false
             param("branchFilter", "+:refs/heads/bbbb")
-           // param("email", "inna_yan@mail.ru")
+            param("email", "inna_yan@mail.ru")
         }
     }
     
