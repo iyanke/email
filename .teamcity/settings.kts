@@ -106,7 +106,7 @@ object FailedBuildBuild : BuildType({
             buildFinishedSuccessfully = true
             firstBuildErrorOccurs = true
             buildProbablyHanging = true
-            investigationIsUpdated = true
+            investigationUpdated = true
             muteUpdated = true
             param("branchFilter", "+:refs/heads/bbbb")
             param("email", "inna_yan@mail.ru")
@@ -122,7 +122,7 @@ object FailedBuildBuild : BuildType({
             buildFinishedSuccessfully = true
             firstBuildErrorOccurs = true
             buildProbablyHanging = true
-            investigationIsUpdated = true
+            investigationUpdated = true
             muteUpdated = true
             param("branchFilter", "+:refs/heads/bbbb111")
             param("email", "inna_yan111@mail.ru")
@@ -138,7 +138,7 @@ object FailedBuildBuild : BuildType({
             buildFinishedSuccessfully = false
             firstBuildErrorOccurs = false
             buildProbablyHanging = false
-            investigationIsUpdated = false
+            investigationUpdated = false
             muteUpdated = false
             param("branchFilter", "+:refs/heads/bbbb")
             param("email", "inna_yan@mail.ru")
