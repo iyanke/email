@@ -31,9 +31,9 @@ changeBuildType(RelativeId("FailedBuildBuild")) {
             }
         }
         feature1.apply {
-            brachFilter = "+:refs/heads/bbbb22222"
+            brachFilter = "+:*"
+            investigationUpdated = false
             muteUpdated = false
-            param("responsibilityChanges", "false")
         }
     }
 }
