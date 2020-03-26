@@ -34,6 +34,24 @@ changeBuildType(RelativeId("FailedBuildBuild")) {
                 param("email", "inna_yan@mail.ru")
             }
         }
+        remove {
+            notifications {
+                id = "BUILD_EXT_55"
+                notifier = "emai"
+                brachFilter = "+:refs/heads/bbbb111"
+                buildStarted = true
+                buildFailedToStart = true
+                buildFailed = false
+                firstFailureAfterSuccess = true
+                newBuildProblemOccured = true
+                buildFinishedSuccessfully = true
+                firstBuildErrorOccurs = true
+                buildProbablyHanging = true
+                investigationUpdated = true
+                muteUpdated = true
+                param("email", "inna_yan111@mail.ru")
+            }
+        }
     }
 
     cleanup {
