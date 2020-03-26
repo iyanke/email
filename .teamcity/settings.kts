@@ -59,6 +59,21 @@ object EmailComposite : BuildType({
     vcs {
         showDependenciesChanges = true
     }
+
+    dependencies {
+        snapshot(FailedBuildBuild) {
+            reuseBuilds = ReuseBuilds.NO
+            onDependencyCancel = FailureAction.ADD_PROBLEM
+        }
+        snapshot(FailedToStart) {
+            reuseBuilds = ReuseBuilds.NO
+            onDependencyCancel = FailureAction.ADD_PROBLEM
+        }
+        snapshot(SuccessfulBuild) {
+            reuseBuilds = ReuseBuilds.NO
+            onDependencyCancel = FailureAction.ADD_PROBLEM
+        }
+    }
 })
 
 object FailedBuildBuild : BuildType({
