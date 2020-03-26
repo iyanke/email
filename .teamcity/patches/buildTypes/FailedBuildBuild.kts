@@ -11,6 +11,11 @@ To apply the patch, change the buildType with id = 'FailedBuildBuild'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("FailedBuildBuild")) {
+    check(name == "Failed build build") {
+        "Unexpected name: '$name'"
+    }
+    name = "Failed build"
+
     features {
         val feature1 = find<Notifications> {
             notifications {
