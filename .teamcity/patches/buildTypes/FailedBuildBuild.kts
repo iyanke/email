@@ -52,6 +52,14 @@ changeBuildType(RelativeId("FailedBuildBuild")) {
                 param("email", "inna_yan111@mail.ru")
             }
         }
+        add {
+            feature {
+                id = "BUILD_EXT_53"
+                type = "xml-report-plugin"
+                param("xmlReportParsing.reportType", "ctest")
+                param("xmlReportParsing.reportDirs", "ddd")
+            }
+        }
     }
 
     cleanup {
