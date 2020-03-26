@@ -41,6 +41,7 @@ project {
 
     buildType(FailedToStart)
     buildType(SuccessfulBuild)
+    buildType(EmailComposite)
     buildType(FailedBuildBuild)
 
     template(EmailTemplate)
@@ -49,6 +50,16 @@ project {
         password("wdotjfgkjfgjfkjg", "credentialsJSON:4b7f2800-1421-459e-9999-512194609621")
     }
 }
+
+object EmailComposite : BuildType({
+    name = "Email Composite"
+
+    type = BuildTypeSettings.Type.COMPOSITE
+
+    vcs {
+        showDependenciesChanges = true
+    }
+})
 
 object FailedBuildBuild : BuildType({
     templates(EmailTemplate)
