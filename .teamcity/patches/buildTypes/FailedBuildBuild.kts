@@ -41,4 +41,21 @@ changeBuildType(RelativeId("FailedBuildBuild")) {
             muteUpdated = false
         }
     }
+
+    cleanup {
+        add {
+            keepRule {
+                id = "KEEP_RULE_12"
+                keepAtLeast = allBuilds()
+                applyToBuilds {
+                    withTags = anyOf("tag")
+                }
+                dataToKeep = historyAndStatistics {
+                    preserveArtifacts = all()
+                }
+                applyPerEachBranch = true
+                preserveArtifactsDependencies = true
+            }
+        }
+    }
 }
