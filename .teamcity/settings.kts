@@ -60,6 +60,14 @@ object EmailComposite : BuildType({
         showDependenciesChanges = true
     }
 
+    features {
+        notifications {
+            notifier = "email"
+            buildFailed = true
+            param("email", "inna.yankelevich@jetbrains.com")
+        }
+    }
+
     dependencies {
         snapshot(FailedBuildBuild) {
             reuseBuilds = ReuseBuilds.NO
