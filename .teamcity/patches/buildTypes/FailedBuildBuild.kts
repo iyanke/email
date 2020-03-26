@@ -1,7 +1,6 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.Notifications
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.notifications
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
@@ -17,7 +16,7 @@ changeBuildType(RelativeId("FailedBuildBuild")) {
     name = "Failed build"
 
     features {
-        val feature1 = find<Notifications> {
+        remove {
             notifications {
                 id = "BUILD_EXT_54"
                 notifier = "email"
@@ -34,11 +33,6 @@ changeBuildType(RelativeId("FailedBuildBuild")) {
                 muteUpdated = true
                 param("email", "inna_yan@mail.ru")
             }
-        }
-        feature1.apply {
-            brachFilter = "+:*"
-            investigationUpdated = false
-            muteUpdated = false
         }
     }
 
