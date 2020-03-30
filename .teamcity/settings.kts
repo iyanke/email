@@ -168,7 +168,7 @@ object FailedBuildBuild : BuildType({
         }
     }
     
-    disableSettings("BUILD_EXT_2")
+    disableSettings("BUILD_EXT_2", "RUNNER_1")
 })
 
 object FailedToStart : BuildType({
